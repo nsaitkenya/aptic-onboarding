@@ -9,41 +9,51 @@
     <style>
       body { 
         font-family: 'Inter', sans-serif; 
-        font-size: 11px; /* Global compact font size */
-        background-color: #f9fafb;
+        font-size: 10px; /* Reduced base font for "zoomed out" feel */
+        background-color: #ffffff;
+        color: #111827;
       }
       .no-scrollbar::-webkit-scrollbar { display: none; }
       .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
       
-      /* Zoom out effect for the whole app container */
       #root {
         height: 100vh;
         overflow: hidden;
       }
       
-      input, button, select {
-        font-size: 11px !important;
+      input, button, select, textarea {
+        font-size: 10px !important;
       }
       
-      h1 { font-size: 1.5rem !important; }
-      h2 { font-size: 1.25rem !important; }
-      h3 { font-size: 1rem !important; }
+      h1 { font-size: 1.25rem !important; }
+      h2 { font-size: 1.1rem !important; }
+      h3 { font-size: 0.9rem !important; }
+
+      .audit-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+      @media (min-width: 1024px) {
+        .audit-grid {
+          grid-template-columns: 350px 1fr;
+        }
+      }
     </style>
     <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react/": "https://esm.sh/react@18.2.0/",
-    "react-dom": "https://esm.sh/react-dom@18.2.0",
-    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-    "@google/genai": "https://esm.sh/@google/genai@1.35.0",
-    "canvas-confetti": "https://esm.sh/canvas-confetti@1.6.0"
-  }
-}
-</script>
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0",
+        "react/": "https://esm.sh/react@18.2.0/",
+        "react-dom": "https://esm.sh/react-dom@18.2.0",
+        "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "@google/genai": "https://esm.sh/@google/genai@1.35.0",
+        "canvas-confetti": "https://esm.sh/canvas-confetti@1.6.0"
+      }
+    }
+    </script>
   </head>
-  <body class="bg-gray-50 text-gray-900 overflow-hidden">
+  <body class="bg-white overflow-hidden">
     <div id="root"></div>
   </body>
 </html>

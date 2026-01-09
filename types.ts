@@ -87,4 +87,5 @@ export interface CustomerRecord extends ExtractionResult {
   id: string;
   joinedAt: string;
   status: 'Provisional' | 'Verified' | 'Flagged';
+  originalDocs: OnboardingDoc[];
 }
