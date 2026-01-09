@@ -1,0 +1,7 @@
+{
+  "name": "Aptic Onboarding",
+  "description": "A high-security, AI-driven customer onboarding system designed for Kenyan compliance. It extracts data from official documents like KRA PIN, CR12, and Certificates of Incorporation using Gemini AI to automate account creation with zero manual data entry errors.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
